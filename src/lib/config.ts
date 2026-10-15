@@ -6,7 +6,7 @@ export const SITE = {
   nombre: "Camiones Exclusivos",
   razonSocial: "Camiones Exclusivos S.R.L.",
   frase: "Camiones usados y 0 km para trabajar en serio, en el corazón del Alto Valle.",
-  url: (process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000").replace(/\/$/, ""),
+  url: (process.env.NEXT_PUBLIC_SITE_URL ?? "https://camiones-exclusivos-cipo.vercel.app/").replace(/\/$/, ""),
 
   // Dirección confirmada en los posteos de Instagram (Ruta 22 Km 1213, Cipolletti)
   direccion: {
