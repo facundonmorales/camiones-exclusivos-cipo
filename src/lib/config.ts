@@ -10,7 +10,7 @@ export const SITE = {
 
   // Dirección confirmada en los posteos de Instagram (Ruta 22 Km 1213, Cipolletti)
   direccion: {
-    calle: "Ruta Nacional 22 Km 1213",
+    calle: "Ruta Nac. 22 Km 1213",
     localidad: "Cipolletti",
     provincia: "Río Negro",
     cp: "8324",
@@ -31,7 +31,7 @@ export const SITE = {
   telefonoE164: "+5492995855300",
   whatsapp: "5492995855300",
   // ⚠️ confirmar email
-  email: "mundocamiones100@gmail.com",
+  email: "camionesexclusivos@gmail.com",
 
   horarios: [
     { dias: "Lunes a viernes", horas: "9 a 18 h" },
