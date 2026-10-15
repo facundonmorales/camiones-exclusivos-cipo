@@ -37,7 +37,7 @@ export function Contacto() {
 
   return (
     <section id="contacto" aria-labelledby="contacto-titulo" className="bg-mist py-20 sm:py-28">
-      <div className="mx-auto grid max-w-7xl gap-8 px-5 sm:px-8 lg:grid-cols-[1fr_1.15fr] lg:gap-12">
+      <div className="mx-auto grid max-w-7xl grid-cols-1 gap-8 px-5 sm:px-8 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.15fr)] lg:gap-12">
         <Reveal>
           <h2 id="contacto-titulo" className="font-display text-4xl font-bold tracking-tight sm:text-5xl">
             Vení a ver las unidades

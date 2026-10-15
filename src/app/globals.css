@@ -35,6 +35,13 @@
   body {
     text-rendering: optimizeLegibility;
   }
+  /* Red de seguridad: si algo llegara a pasarse de ancho, no se genera
+     scroll horizontal ni hay que alejar el zoom. "clip" no rompe los
+     elementos sticky (a diferencia de "hidden"). */
+  html,
+  body {
+    overflow-x: clip;
+  }
   :focus-visible {
     outline: 2px solid var(--color-brand);
     outline-offset: 3px;

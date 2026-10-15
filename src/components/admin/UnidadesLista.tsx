@@ -190,7 +190,7 @@ export function UnidadesLista({
         </p>
       )}
 
-      <div className="grid gap-2 rounded-2xl bg-white p-3 ring-1 ring-line sm:grid-cols-2 lg:grid-cols-[2fr_1fr_1fr_1fr_auto]">
+      <div className="grid grid-cols-1 gap-2 rounded-2xl bg-white p-3 ring-1 ring-line sm:grid-cols-2 lg:grid-cols-[2fr_1fr_1fr_1fr_auto]">
         <div className="relative sm:col-span-2 lg:col-span-1">
           <Search className="pointer-events-none absolute left-3.5 top-1/2 size-4 -translate-y-1/2 text-ink/40" aria-hidden="true" />
           <input

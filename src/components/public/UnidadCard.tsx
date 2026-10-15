@@ -87,15 +87,15 @@ export function UnidadCard({ unidad: u, prioridad = false }: { unidad: UnidadTar
         {u.descripcion_corta && <p className="mt-1.5 line-clamp-2 text-sm leading-relaxed text-ink/60">{u.descripcion_corta}</p>}
 
         <div className="mt-auto flex items-end justify-between gap-3 pt-5">
-          <div>
+          <div className="min-w-0">
             <p className="text-xs text-ink/50">{u.precio == null ? "Precio" : u.moneda === "USD" ? "Dólares" : "Pesos"}</p>
-            <p className={cn("font-display text-xl font-bold tracking-tight", vendido ? "text-ink/40" : "text-ink")}>
+            <p className={cn("break-words font-display text-xl font-bold tracking-tight", vendido ? "text-ink/40" : "text-ink")}>
               {vendido ? "Vendido" : formatPrecio(u.precio, u.moneda)}
             </p>
           </div>
           <span
             aria-hidden="true"
-            className="inline-flex items-center gap-1 rounded-xl bg-ink px-4 py-2.5 text-sm font-semibold text-white transition group-hover:bg-brand"
+            className="inline-flex shrink-0 items-center gap-1 rounded-xl bg-ink px-4 py-2.5 text-sm font-semibold text-white transition group-hover:bg-brand"
           >
             Ver unidad
             <ArrowUpRight className="size-4 transition group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />

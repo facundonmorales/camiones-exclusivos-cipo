@@ -22,7 +22,7 @@ export function Beneficios() {
         >
           Todo lo que necesitás para comprar tu próximo camión, en un solo lugar
         </h2>
-        <ol className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        <ol className="mt-12 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {ITEMS.map((b, i) => (
             <li key={b.n}>
               <Reveal delay={i * 90} className="h-full">

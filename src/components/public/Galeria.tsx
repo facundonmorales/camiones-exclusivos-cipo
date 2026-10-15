@@ -64,7 +64,7 @@ export function Galeria({ fotos, titulo, atenuada = false }: { fotos: UnidadFoto
   }
 
   return (
-    <div>
+    <div className="min-w-0">
       <div className="group relative overflow-hidden rounded-2xl bg-ink ring-1 ring-line">
         <div
           ref={pista}
@@ -125,7 +125,7 @@ export function Galeria({ fotos, titulo, atenuada = false }: { fotos: UnidadFoto
       </div>
 
       {total > 1 && (
-        <ul className="no-scrollbar mt-3 flex gap-2 overflow-x-auto pb-1">
+        <ul className="no-scrollbar mt-3 flex w-full max-w-full gap-2 overflow-x-auto pb-1">
           {fotos.map((f, i) => (
             <li key={f.id} className="shrink-0">
               <button

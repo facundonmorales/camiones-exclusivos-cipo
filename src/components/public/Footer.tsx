@@ -15,7 +15,7 @@ export function Footer() {
   return (
     <footer className="bg-ink pb-[calc(2rem+env(safe-area-inset-bottom))] pt-16 text-white">
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
-        <div className="grid gap-10 md:grid-cols-[1.4fr_1fr_1fr]">
+        <div className="grid grid-cols-1 gap-10 md:grid-cols-[1.4fr_1fr_1fr]">
           <div>
             <Logo tamano={112} conTexto={false} />
             <p className="mt-5 max-w-sm text-white/55">{SITE.frase}</p>

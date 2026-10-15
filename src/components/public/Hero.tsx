@@ -39,7 +39,7 @@ export function Hero() {
           </a>
         </div>
 
-        <dl className="mt-12 grid max-w-3xl gap-5 border-t border-white/15 pt-6 text-sm sm:mt-14 sm:grid-cols-3 sm:gap-8">
+        <dl className="mt-12 grid max-w-3xl grid-cols-1 gap-5 border-t border-white/15 pt-6 text-sm sm:mt-14 sm:grid-cols-3 sm:gap-8">
           <div className="flex gap-3">
             <span className="grid size-9 shrink-0 place-items-center rounded-lg bg-brand/20 text-[#7ea2ff] ring-1 ring-brand/40">
               <MapPin className="size-[18px]" aria-hidden="true" />

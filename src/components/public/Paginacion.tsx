@@ -46,6 +46,10 @@ export function Paginacion({
       >
         <ChevronLeft className="size-4" />
       </button>
+      <span className="px-3 text-sm font-medium tabular-nums text-ink/70 sm:hidden" aria-current="page">
+        Página {desde === hasta ? desde : `${desde}–${hasta}`} de {total}
+      </span>
+      <div className="hidden items-center gap-1.5 sm:flex">
       {numeros(total, desde, hasta).map((n, i) =>
         n === "…" ? (
           <span key={`e${i}`} className="px-1 text-ink/40" aria-hidden="true">
@@ -69,6 +73,7 @@ export function Paginacion({
           </button>
         ),
       )}
+      </div>
       <button
         type="button"
         onClick={() => onIr(hasta + 1)}

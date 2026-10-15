@@ -251,7 +251,7 @@ export function UnidadForm({ unidad }: { unidad?: Unidad }) {
 
       <div className="space-y-5">
         <Seccion titulo="Datos básicos">
-          <div className="grid gap-4 sm:grid-cols-2">
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
             <Field id="marca" label="Marca" error={err("marca")}>
               <input id="marca" value={f.marca} onChange={(e) => set("marca", e.target.value)} placeholder="Volkswagen" className={inputCls(!!err("marca"))} {...aria("marca")} />
             </Field>
@@ -345,7 +345,7 @@ export function UnidadForm({ unidad }: { unidad?: Unidad }) {
         </Seccion>
 
         <Seccion titulo="Precio y condiciones" descripcion="Si dejás el precio vacío, en la web aparece “Consultar”.">
-          <div className="grid gap-4 sm:grid-cols-[auto_1fr]">
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-[auto_minmax(0,1fr)]">
             <Field id="moneda" label="Moneda">
               <div className="grid grid-cols-2 gap-2" role="radiogroup" aria-label="Moneda">
                 {MONEDAS.map((m) => (
@@ -426,7 +426,7 @@ export function UnidadForm({ unidad }: { unidad?: Unidad }) {
               {f.especificaciones.length > 0 && (
                 <ul className="space-y-2">
                   {f.especificaciones.map((s, i) => (
-                    <li key={s.key} className="grid grid-cols-[1fr_1.4fr_auto] items-start gap-2">
+                    <li key={s.key} className="grid grid-cols-[minmax(0,1fr)_minmax(0,1.4fr)_auto] items-start gap-2">
                       <div>
                         <input
                           value={s.clave}

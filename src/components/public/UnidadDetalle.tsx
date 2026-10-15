@@ -43,12 +43,12 @@ export function UnidadDetalle({ unidad: u, otras }: { unidad: Unidad; otras: Uni
           </Link>
         </nav>
 
-        <div className="grid gap-8 lg:grid-cols-12 lg:gap-12">
-          <div className="lg:col-span-7">
+        <div className="grid grid-cols-1 gap-8 lg:grid-cols-12 lg:gap-12">
+          <div className="min-w-0 lg:col-span-7">
             <Galeria fotos={fotos} titulo={nombreCompleto(u)} atenuada={vendido} />
           </div>
 
-          <aside className="lg:col-span-5 lg:row-span-2">
+          <aside className="min-w-0 lg:col-span-5 lg:row-span-2">
             <div className="lg:sticky lg:top-28">
               <div className="flex flex-wrap gap-1.5">
                 {u.condicion === "0km" ? (
@@ -60,7 +60,7 @@ export function UnidadDetalle({ unidad: u, otras }: { unidad: Unidad; otras: Uni
                 {u.estado === "reservado" && <Badge className="bg-amber-400 text-ink">Reservado</Badge>}
                 {vendido && <Badge className="bg-ink text-white">Vendido</Badge>}
               </div>
-              <h1 className="mt-4 font-display text-3xl font-bold leading-tight tracking-tight text-balance sm:text-4xl">
+              <h1 className="mt-4 break-words font-display text-3xl font-bold leading-tight tracking-tight text-balance sm:text-4xl">
                 {u.titulo}
               </h1>
               <p className="mt-2 text-ink/60">
@@ -71,7 +71,7 @@ export function UnidadDetalle({ unidad: u, otras }: { unidad: Unidad; otras: Uni
                 <p className="text-sm text-ink/55">
                   {vendido ? "Esta unidad ya fue vendida" : u.precio == null ? "Precio" : `Precio en ${u.moneda === "USD" ? "dólares" : "pesos"}`}
                 </p>
-                <p className={cn("mt-1 font-display text-4xl font-bold tracking-tight", vendido && "text-ink/40")}>
+                <p className={cn("mt-1 break-words font-display text-3xl font-bold tracking-tight sm:text-4xl", vendido && "text-ink/40")}>
                   {vendido ? "Vendido" : formatPrecio(u.precio, u.moneda)}
                 </p>
 
@@ -112,7 +112,7 @@ export function UnidadDetalle({ unidad: u, otras }: { unidad: Unidad; otras: Uni
             </div>
           </aside>
 
-          <div className="space-y-10 lg:col-span-7">
+          <div className="min-w-0 space-y-10 lg:col-span-7">
             <section aria-labelledby="ficha-titulo">
               <h2 id="ficha-titulo" className="font-display text-2xl font-semibold tracking-tight">
                 Ficha técnica
@@ -120,8 +120,8 @@ export function UnidadDetalle({ unidad: u, otras }: { unidad: Unidad; otras: Uni
               <dl className="mt-4 overflow-hidden rounded-2xl ring-1 ring-line">
                 {ficha.map(([k, v], i) => (
                   <div key={`${k}-${i}`} className="grid grid-cols-[minmax(0,2fr)_minmax(0,3fr)] gap-4 px-5 py-3.5 odd:bg-mist">
-                    <dt className="text-ink/55">{k}</dt>
-                    <dd className="font-medium">{v}</dd>
+                    <dt className="min-w-0 break-words text-ink/55">{k}</dt>
+                    <dd className="min-w-0 break-words font-medium">{v}</dd>
                   </div>
                 ))}
               </dl>
@@ -150,7 +150,7 @@ export function UnidadDetalle({ unidad: u, otras }: { unidad: Unidad; otras: Uni
                 Ver todas
               </Link>
             </div>
-            <ul className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            <ul className="mt-8 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
               {otras.map((o) => (
                 <li key={o.id}>
                   <UnidadCard unidad={o} />
